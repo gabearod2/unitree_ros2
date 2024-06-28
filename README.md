@@ -89,7 +89,7 @@ source /opt/ros/humble/setup.bash
 source $HOME/workspaces/unitree_ros2/cyclonedds_ws/install/setup.bash
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 export CYCLONEDDS_URI='<CycloneDDS><Domain><General><Interfaces>
-                            <NetworkInterface name="enp3s0" priority="default" multicast="default" />
+                            <NetworkInterface name="enp114s0" priority="default" multicast="default" />
                         </Interfaces></General></Domain></CycloneDDS>'
 ```
 where "enp3s0" is the network interface name of unitree robot connected.
