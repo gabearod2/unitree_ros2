@@ -42,21 +42,21 @@ The cyclonedds version of Unitree robot is 0.10.2. To communicate with Unitree r
 
 Before compiling cyclonedds, please ensure that ros2 environment has **NOT** been sourced when starting the terminal. Otherwise, it may cause errors in compilation.
 
-If "source/opt/ros/foxy/setup. bash" has been added to the ~/.bashrc file when installing ROS2, it needs to be commented out:
+If "source/opt/ros/humble/setup. bash" has been added to the ~/.bashrc file when installing ROS2, it needs to be commented out:
 
 ```bash
 sudo apt install gedit
 sudo gedit ~/.bashrc
 ``` 
 ```bash
-# source /opt/ros/foxy/setup.bash 
+# source /opt/ros/humble/setup.bash 
 ```
 
 
 Compile cyclone-dds
 ```bash
 cd ~/unitree_ros2/cyclonedds_ws/src
-git clone https://github.com/ros2/rmw_cyclonedds -b foxy
+git clone https://github.com/ros2/rmw_cyclonedds -b humble
 git clone https://github.com/eclipse-cyclonedds/cyclonedds -b releases/0.10.x 
 cd ..
 colcon build --packages-select cyclonedds #Compile cyclone-dds package
@@ -80,13 +80,13 @@ Next, open the network settings, find the network interface that the robot conne
 
 Open setup.sh file.
 ```bash
-sudo gedit ~/unitree_ros2/setup.sh
+sudo gedit ~/unitree_ros2_rl_deploy/setup.sh
 ```
 ```bash
 #!/bin/bash
 echo "Setup unitree ros2 environment"
-source /opt/ros/foxy/setup.bash
-source $HOME/unitree_ros2/cyclonedds_ws/install/setup.bash
+source /opt/ros/humble/setup.bash
+source $HOME/workspaces/unitree_ros2_rl_deploy/cyclonedds_ws/install/setup.bash
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 export CYCLONEDDS_URI='<CycloneDDS><Domain><General><Interfaces>
                             <NetworkInterface name="enp3s0" priority="default" multicast="default" />
@@ -97,17 +97,17 @@ Modify it to the corresponding network interface according to the actual situati
 
 Source the environment to setup the ROS2 support of Unitree robot: 
 ```bash
-source ~/unitree_ros2/setup.sh
+source ~/unitree_ros2_rl_deploy/setup.sh
 ```
 If you don't want to source the bash script every time when a new terminal opens, you can write the content of bash script into ~/.bashrc, but attention should be paid when there are multiple ROS environments coexisting in the system.
 
 If your computer is not connected to the robot but you still want to use Unitree ROS2 for simulation and other functions, you can use the local loopback "lo" as the network interface.
 ```bash
-source ~/unitree_ros2/setup_local.sh # use "lo" as the network interface
+source ~/unitree_ros2_rl_deploy/setup_local.sh # use "lo" as the network interface
 ```
 or
 ```bash
-source ~/unitree_ros2/setup_default.sh # No network network interface specified 
+source ~/unitree_ros2_rl_deploy/setup_default.sh # No network network interface specified 
 ```
 
 
@@ -129,8 +129,8 @@ Input ros2 topic echo /sportmodestate，you can see the data of the topic as 
 ### 3. Examples
 Open a terminal and input:
 ```bash
-source ~/unitree_ros2/setup.sh
-cd ~/unitree_ros2/example
+source ~/workspaces/unitree_ros2_rl_deploy/setup.sh
+cd ~/unitree_ros2_rl_deploy/example
 colcon build
 ```
 After compilation, run in the terminal:
