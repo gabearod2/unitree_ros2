@@ -22,7 +22,7 @@ The installation of ROS2 foxy can refer to: https://docs.ros.org/en/foxy/Install
 ctrl+alt+T open the terminal, clone the repository: https://github.com/gabearod2/unitree_ros2_rl_deploy
 
 ```bash
-git clone https://github.com/unitreerobotics/unitree_ros2
+git clone https://github.com/gabearod2/unitree_ros2_rl_deploy
 ```
 where:
 - **cyclonedds_ws**: The workspace of Unitree ros2 package. The msg for Unitree robot are supplied in the subfolder cyclonedds_ws/unitree/unitree_go and cyclonedds_ ws/unitree/unitree_api.
