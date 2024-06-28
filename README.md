@@ -33,8 +33,8 @@ where:
 
 ### 1. Dependencies
 ```bash
-sudo apt install ros-foxy-rmw-cyclonedds-cpp
-sudo apt install ros-foxy-rosidl-generator-dds-idl
+sudo apt install ros-humble-rmw-cyclonedds-cpp
+sudo apt install ros-humble-rosidl-generator-dds-idl
 ```
 
 ### 2. Compile cyclone dds
