@@ -19,7 +19,7 @@ Taking ROS2 foxy as an example, if you need another version of ROS2, replace "fo
 
 The installation of ROS2 foxy can refer to: https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
 
-ctrl+alt+T open the terminal, clone the repository: https://github.com/unitreerobotics/unitree_ros2
+ctrl+alt+T open the terminal, clone the repository: https://github.com/gabearod2/unitree_ros2_rl_deploy
 
 ```bash
 git clone https://github.com/unitreerobotics/unitree_ros2
