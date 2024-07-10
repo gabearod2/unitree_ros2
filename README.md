@@ -53,7 +53,7 @@ sudo gedit ~/.bashrc
 ```
 
 
-Compile cyclone-dds
+Compile cyclone-dds - edited 
 ```bash
 cd ~/workspaces/unitree_ros2/cyclonedds_ws/src
 git clone https://github.com/ros2/rmw_cyclonedds -b humble
